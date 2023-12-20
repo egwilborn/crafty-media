@@ -7,8 +7,9 @@ module.exports = {
   ],
   theme: {
     colors: {
-      navy: "#1d4ed8",
-      pink: "#f0abfc",
+      navy: "#636796",
+      pink: "#dfbad7",
+      liteGreen: "#a9cfc0",
     },
     extend: {
       backgroundImage: {
