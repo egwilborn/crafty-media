@@ -13,6 +13,7 @@
     "@heroicons/react": "^2.1.1",
     "@passageidentity/passage-elements": "^1.18.0",
     "@passageidentity/passage-node": "^2.6.0",
+    "firebase": "^10.7.1",
     "firebase-admin": "^12.0.0",
     "next": "14.0.4",
     "react": "^18",
