@@ -3,7 +3,7 @@ import { db } from "@/firebase";
 export async function GET(_) {
   let posts = [];
   try {
-    const res = await db.collection("posts").get();
+    const res = await db.collection("posts").orderBy("datePosted").get();
     res.forEach(function (doc) {
       posts.push({ id: doc.id, info: doc.data() });
     });
