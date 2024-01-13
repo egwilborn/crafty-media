@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-
+import PostCardGallery from "@/components/PostCardGallery";
 export default function Home() {
   const [posts, setPosts] = useState(null);
   const [isLoading, setLoading] = useState(true);
@@ -18,13 +18,9 @@ export default function Home() {
   if (isLoading) return <p>Loading...</p>;
   if (!posts) return <p>No profile data</p>;
 
-  const allPosts = posts.data.map(function (post) {
-    return (
-      <div>
-        <p>{post.id}</p>
-        <p>{post.info.description}</p>
-      </div>
-    );
-  });
-  return <div>{allPosts}</div>;
+  return (
+    <div>
+      <PostCardGallery posts={posts} />
+    </div>
+  );
 }
