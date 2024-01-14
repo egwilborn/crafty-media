@@ -10,6 +10,7 @@ module.exports = {
       navy: "#4f5170",
       pink: "#dfbad7",
       liteGreen: "#a9cfc0",
+      darkGreen: "#234a49",
     },
     extend: {
       backgroundImage: {
