@@ -13,11 +13,24 @@ export default function PostCard({ post }) {
         console.log(crafter);
       });
   }, []);
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
   return (
-    <div className="w-5/12 py-8 bg-darkGreen h-full rounded-xl flex flex-col justify-start items-center">
-      <img src={post.info.photo} className="w-96 h-72" />
-      <p className="text-pink">{post.info.description}</p>
-      <p>{crafter.data.bio}</p>
+    <div className="w-5/12 py-8 bg-darkGreen h-full h-full rounded-xl flex flex-col justify-start items-center">
+      <img src={post.info.photo} className="w-96 h-auto" />
+      <div className="flex flex-row items-center justify-start w-full gap-3 pt-5">
+        <div className="flex flex-col items-center pl-1 w-3/12">
+          <img
+            className="h-10 rounded-full"
+            src={crafter.data.profilePhotoUrl}
+          />
+          <p className="text-liteGreen">
+            {crafter.data.firstName} {crafter.data.lastName}
+          </p>
+        </div>
+        <p className="text-pink col-span-2 w-9/12">{post.info.description}</p>
+      </div>
     </div>
   );
 }
