@@ -11,7 +11,6 @@ export default function Home() {
       .then((posts) => {
         setPosts(posts);
         setLoading(false);
-        console.log(posts);
       });
   }, []);
 
