@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import AddPost from "@/components/AddPost";
 import PostCardGallery from "@/components/PostCardGallery";
 export default function Home() {
   const [posts, setPosts] = useState(null);
@@ -20,6 +21,7 @@ export default function Home() {
   return (
     <div>
       <PostCardGallery posts={posts} />
+      <AddPost />
     </div>
   );
 }
