@@ -12,6 +12,7 @@ module.exports = {
       liteGreen: "#a9cfc0",
       darkGreen: "#234a49",
       hoverNavy: "#65688f",
+      hoverLiteGreen: "#95cfb7",
     },
     extend: {
       backgroundImage: {
