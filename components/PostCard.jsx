@@ -20,16 +20,18 @@ export default function PostCard({ post }) {
     <div className="w-5/12 py-8 bg-darkGreen h-full h-full rounded-xl flex flex-col justify-start items-center">
       <img src={post.info.photo} className="w-96 h-auto" />
       <div className="flex flex-row items-center justify-start w-full gap-3 pt-5">
-        <div className="flex flex-col items-center pl-1 w-3/12">
+        <div className="flex flex-col items-center pl-1 pt-1 w-3/12">
           <img
-            className="h-10 rounded-full"
+            className="h-16 w-16 rounded-full"
             src={crafter.data.profilePhotoUrl}
           />
           <p className="text-liteGreen">
             {crafter.data.firstName} {crafter.data.lastName}
           </p>
         </div>
-        <p className="text-pink col-span-2 w-9/12">{post.info.description}</p>
+        <p className="text-pink col-span-2 w-9/12 pr-2">
+          {post.info.description}
+        </p>
       </div>
     </div>
   );
